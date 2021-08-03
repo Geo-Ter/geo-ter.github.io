@@ -1,0 +1,245 @@
+.about-us {
+    background-color: #18151a;
+
+    &__container {
+        display: flex;
+        flex-flow: column;
+        background-color: #18151a;
+
+        &--aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__container--article {
+        display: flex;
+        flex-flow: column;
+        padding: 60px 15px 0 15px;
+    }
+
+    &__describe {
+        display: flex;
+
+        &--part-1 {
+            flex-direction: column-reverse;
+        }
+
+        &--part-2 {
+            flex-flow: column;
+            padding: 50px 0 30px 0;
+
+            & .about-us__title {
+                margin: 30px 0 30px 0;
+            }
+        }
+
+        &--part-4 {
+            padding: 20px 0 20px 0;
+        }
+    }
+
+    &__title {
+        font-family: Lato-Bold;
+        font-size: 24px;
+        color: white;
+    }
+
+    &__text-wrap {
+        & .button {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-family: Lato-Regular;
+        font-size: 16px;
+        color: #c4b2d3;
+
+        & a {
+            color: white;
+        }
+
+        &-point {
+            font-family: Lato-Regular;
+            font-size: 16px;
+            color: #c4b2d3;
+            position: relative;
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                display: none;
+            }
+
+            &::before {
+                content: "";
+                display: flex;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #c4b2d3;
+                position: absolute;
+                left: -10px;
+                top: 10px;
+            }
+        }
+
+        &-container {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+        }
+    }
+
+    &__img--ratched-clank {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.games__card--aside {
+    background-color: #252129;
+    height: auto !important;
+    position: relative;
+    padding-bottom: 30px;
+    width: 300px;
+
+    & .game-price {
+        margin-left: 10px;
+    }
+
+    & .game-sale {
+        padding-top: 7px;
+    }
+
+    & .game-information__container {
+        align-items: start;
+        border-bottom: 1px solid #c4b2d31c;
+        padding-bottom: 0px;
+    }
+
+    & .game__title {
+        top: 42%;
+        left: 20px;
+    }
+
+    & .game-about {
+        font-family: Lato-Light;
+        font-size: 14px;
+        margin-top: 1px;
+    }
+
+    & .button {
+        width: 80%;
+    }
+}
+
+.main__title--aside {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    text-transform: uppercase;
+}
+
+.aside {
+
+
+    &__img {
+        display: flex;
+        width: 100%;
+
+        &-container {
+            display: flex;
+            padding: 50px 15px 20px 15px;
+        }
+    }
+}
+
+.game-counter {
+    font-family: Lato-Black;
+    display: flex;
+    flex-flow: row;
+    background-color: #18151a;
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 5px 0 5px 0;
+    justify-content: space-between;
+
+    &__item:not(:last-child) {
+        border-right: 1px solid #3a3341;
+    }
+
+    &__item {
+        display: flex;
+        width: 25%;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+            font-family: Lato-Black;
+            font-size: 24px;
+            color: #ffb400;
+        }
+
+        &-about {
+            font-family: Lato-Black;
+            font-size: 12px;
+            color: white;
+        }
+    }
+
+}
+
+@media (min-width: 620px) {
+    .about-us__img {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .about-us {
+        & .container {
+            padding: 0;
+        }
+    }
+    .about-us__container {
+        flex-flow: row;
+        padding: 0px 20px 60px 20px; 
+        &--article {
+            width: 73%;
+        }
+        &--aside {
+            justify-content: flex-start;
+            align-items: start;
+            padding: 60px 15px 0 0;
+        }
+    }
+    .about-us__text-point {
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            display: flex;
+        }
+    }
+    .about-us__img {
+        display: flex;
+        padding: 0 20px 0 10px;
+        width: 500px;
+    }
+    .about-us__describe {
+        &--part-1 {
+            flex-flow: row;
+           
+        }
+        &--part-3 {
+            display: flex;
+            flex-flow: row;
+        }
+    }
+
+}

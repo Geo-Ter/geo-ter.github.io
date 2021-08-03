@@ -1,0 +1,66 @@
+//* Fonts
+@font-face {
+    font-family: JosefinSans-Bold;
+    src: url(../fonts/JosefinSans-Bold.ttf);
+}
+@font-face {
+    font-family: JosefinSans-Regular;
+    src: url(../fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: JosefinSans-Light;
+    src: url(../fonts/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: JosefinSans-Medium;
+    src: url(../fonts/JosefinSans-Medium.ttf);
+}
+@font-face {
+    font-family: Lato-Black;
+    src: url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+    font-family:Lato-Bold ;
+    src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: Lato-Light;
+    src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Milk-font;
+    src: url(../fonts/Milk.ttf);
+}
+
+//* Parts
+@import "./parts/Header";
+@import './parts/ButtonSearchModal';
+@import './parts/MainSliderSection';
+@import './parts/CompanyConditional';
+@import './parts/GamesList';
+@import './parts/ClientsFeedback';
+@import './parts/AboutCompany';
+@import './parts/Footer';
+
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato-Regular;
+}
+.container {
+    width:inherit;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 0;
+}
+a:hover {
+    color:white;
+}

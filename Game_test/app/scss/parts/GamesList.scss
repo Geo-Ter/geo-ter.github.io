@@ -1,0 +1,236 @@
+.games-list {
+    background-color: #252129;
+
+    & .swiper-pagination {
+        position: absolute;
+        // bottom: 77%;
+        // left: 45%;
+        bottom: 1%;
+        left: -3%;
+    }
+
+    & .swiper-pagination-bullet {
+        background-color: rgba(212, 211, 211, 0.644);
+
+        &-active {
+            background: rgba(230, 228, 227, 0.623);
+        }
+    }
+
+    & .swiper-slide {
+        display: flex;
+        justify-content: center;
+        min-height: 0;
+        // &-active {
+        // }
+    }
+
+    & .swiper-wrapper {
+        padding: 0 0 50px 0;
+    }
+
+
+}
+
+
+
+.games__card {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 400px;
+    height: 430px;
+    background-color: #18151A;
+    position: relative;
+    margin-right: 10px;
+
+}
+
+.game {
+    &-paggination {
+        display: none;
+    }
+
+    &__tabs {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: row;
+        justify-content: start;
+        border-bottom: 1px solid rgba(175, 173, 173, 0.281);
+        position: relative;
+    }
+
+    &-tab__text {
+        font-family: Lato-Regular;
+        font-size: 16px;
+        color: #dad6d6;
+        margin-right: 15px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        margin-bottom: 0px;
+        z-index: 10;
+
+        &--active {
+            border-bottom: 2px solid #ffa008;
+            position: relative;
+            
+
+        }
+    }
+
+    &__container-title {
+        display: flex;
+        justify-content: center;
+        font-family: Lato-Bold;
+        font-size: 26px;
+        padding-top: 60px;
+        color: white;
+    }
+
+    &-img__container {
+        position: relative;
+        width: 100%;
+        height: 220px;
+
+        &--focus {
+            background-color: #1b1a1a78;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                opacity: 1;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+
+        & img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    &-information__container {
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        width: 100%;
+        padding: 20px 20px 30px 20px;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    &__title {
+        font-family: Lato-Regular;
+        color: white;
+        position: absolute;
+        top: 225px;
+    }
+
+    &-price__container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        width: 140px;
+    }
+
+    &-price {
+        font-family: Lato-Regular;
+        color: #FF6C84;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    &-sale {
+        font-family: Lato-Regular;
+        color: #8A7A98;
+        font-size: 14px;
+        text-decoration: line-through;
+        padding-top: 10px;
+    }
+
+    &-about {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        margin-top: -32px;
+        font-size: 14px;
+        font-family: Lato-Regular;
+        color: #C4B2D3;
+        border-top: 2px solid #24202785;
+    }
+
+}
+
+.sale-ticket {
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 75px solid #E52F44;
+    border-left: 75px solid transparent;
+
+    &-price {
+        position: absolute;
+        left: -40px;
+        top: -62px;
+        color: white;
+        font-style: 30px;
+        font-family: Lato-Regular;
+    }
+}
+
+.rate-star {
+
+    &:nth-child(1) {
+        fill: #FFB400;
+    }
+
+    &:nth-child(2) {
+        fill: #FFB400;
+    }
+
+    &:nth-child(3) {
+        fill: #FFB400;
+    }
+
+}
+.focus--btn__container {
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    & .button {
+        width: 50%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 820px) {
+    .games-list {
+        padding-top: 204px;
+        margin-top: -313px;
+
+        & .swiper-pagination {
+            bottom: 78%;
+            left: 40%;
+        }
+    }
+
+
+
+}
+
+@media (min-width: 1120px) {
+    .games-list {
+        padding-top: 100px;
+        margin-top: 0px;
+
+    }
+}

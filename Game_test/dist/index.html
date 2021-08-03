@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon/favicon.jpeg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Test Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__container">
+                <div class="logo__container">
+                    <img src="./img/icon/logo.png" alt="logo-icon">
+                </div>
+                <div class="navbar__profile">
+                    <div class="search__wrap">
+                        <svg class="search__icon" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+                            <image fill='#fefefe' width="28" height="28"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABHNCSVQICAgIfAhkiAAAAolJREFUSEu91k3IVVUUxvHfSwZ+QSKCXyRkIUgWTgRHijoIUiqhQZgDKUKxRkEIggiCBOFQBxbqIERFMQQDKbFJ0MAgUCqCCM1ABJWgyKDklQfWheP1nHuvXd726HD2Puu/11rPWutMTE5O6ljT8Ro2YiUW4Qncwve4iJO422Wg7f1ECzBGd2AP5g8x9hcOYR/+HAXcD5yHU1jf+PgGvsR1/IPFWIMXGmd+rmjE84GrCQzsK6yoL77FLlzqsPA89uPV2v8da3FlELEHTBi/aHj2YYX0/rAb400cw5NINJLvzrz2gO/iYBkPbPcIoOaR13G6XgT+Vtf3AUaN10ogCeNqjOJZv82P8Q4i+4T7xy6VvoETtblhQM6GOb0QvyAOHMAHXcBPsbXiv2SY1SH7n5VafygvHzmekF4tZR7F22MCd1ZdJqwz8Xe/vQDvYC72VgGPw3wZn5eBZ0obD9kLMPXzVCkzCh1nvYQLZeBp/Nbm4U9YVqF4bxwatlVNxsyMrpCexWYkly+OCUwNBhq1Ptul0l6is5+2NrQfdlxqFn4tPRyuAdCq0ggmsU4IzpWs/4ujmS6ZGlmrkCbSCszLjxqFmpo8/pjE9M9vqujTkyOe1tXrpbPxHZ6rEbQFZ0aEBpbxlWnzR+kgrXIgMJvpf19jTp38pGrz5oCcvV/llHaWdQ+bBrXH/gEclZ5HaigrnSJ1FQ9y6zT19MzMvVdKIDkXz6aVDgZC234xIqI038h7YoSwJmfbsbQuG/F1QtuAPcbymmtpV3luwlNn8foILjculV+TRKgTOgjYdC45WoB/cbutg4wKHRU4QmQfOtLp6VQBQ2+FTiWwDbpxqoH90Ov/BzDQdTW2LjwAN0PVgh3ywqwAAAAASUVORK5CYII=" />
+                        </svg>
+                        <input type="text" placeholder="Search game..." id="Search">
+                    </div>
+                    <div class="navbar__profile-btn">
+                        <div class="button button-sign-up" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            REGISTER
+                        </div>
+                        <div class="button button-sign-in" data-bs-toggle="modal" data-bs-target="#signInModal">LOGIN
+                        </div>
+                    </div>
+                </div>
+                <div class="header__btn--mobile">
+                    <div class="cube"></div>
+                    <div class="cube cube-action"></div>
+                    <div class="cube"></div>
+                    <div class="cube"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Modal -->
+    <!-- Creacte account modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+                    <button type="button" class="btn-close btn-close-x" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="Username" id="Search">
+                    <input type="email" placeholder="Email" id="Search">
+                    <input type="password" placeholder="Password" id="Search">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button button-sign-up">REGISTER</button>
+                    <div class="modal-footer-text__container">
+                        <p class="modal-footer-text">Have Account?<br><a href="#">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign-in modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-title-sign-in" id="exampleModalLabel">Sign in</h5>
+                    <button type="button" class="btn-close btn-close-x" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="Username or Email" id="Search">
+                    <input type="password" placeholder="Password" id="Search">
+                </div>
+                <div class="modal-footer modal-footer-sign-in">
+                    <button type="button" class="button button-sign-in">LOGIN</button>
+                    <div class="modal-footer-text__container">
+                        <p class="modal-footer-text">No Account?<br><a href="#">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="navbar__container">
+                <div class="navbar__profile--mobile">
+                    <div class="search__wrap--mobile">
+                        <svg class="search__icon--mobile" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+                            <image fill='#fefefe' width="28" height="28"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABHNCSVQICAgIfAhkiAAAAolJREFUSEu91k3IVVUUxvHfSwZ+QSKCXyRkIUgWTgRHijoIUiqhQZgDKUKxRkEIggiCBOFQBxbqIERFMQQDKbFJ0MAgUCqCCM1ABJWgyKDklQfWheP1nHuvXd726HD2Puu/11rPWutMTE5O6ljT8Ro2YiUW4Qncwve4iJO422Wg7f1ECzBGd2AP5g8x9hcOYR/+HAXcD5yHU1jf+PgGvsR1/IPFWIMXGmd+rmjE84GrCQzsK6yoL77FLlzqsPA89uPV2v8da3FlELEHTBi/aHj2YYX0/rAb400cw5NINJLvzrz2gO/iYBkPbPcIoOaR13G6XgT+Vtf3AUaN10ogCeNqjOJZv82P8Q4i+4T7xy6VvoETtblhQM6GOb0QvyAOHMAHXcBPsbXiv2SY1SH7n5VafygvHzmekF4tZR7F22MCd1ZdJqwz8Xe/vQDvYC72VgGPw3wZn5eBZ0obD9kLMPXzVCkzCh1nvYQLZeBp/Nbm4U9YVqF4bxwatlVNxsyMrpCexWYkly+OCUwNBhq1Ptul0l6is5+2NrQfdlxqFn4tPRyuAdCq0ggmsU4IzpWs/4ujmS6ZGlmrkCbSCszLjxqFmpo8/pjE9M9vqujTkyOe1tXrpbPxHZ6rEbQFZ0aEBpbxlWnzR+kgrXIgMJvpf19jTp38pGrz5oCcvV/llHaWdQ+bBrXH/gEclZ5HaigrnSJ1FQ9y6zT19MzMvVdKIDkXz6aVDgZC234xIqI038h7YoSwJmfbsbQuG/F1QtuAPcbymmtpV3luwlNn8foILjculV+TRKgTOgjYdC45WoB/cbutg4wKHRU4QmQfOtLp6VQBQ2+FTiWwDbpxqoH90Ov/BzDQdTW2LjwAN0PVgh3ywqwAAAAASUVORK5CYII=" />
+                        </svg>
+                        <input type="text" placeholder="Search game..." id="Search--mobile">
+                    </div>
+                    <div class="navbar__profile-btn--mobile">
+                        <div class="button button-sign-up button-mob" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">REGISTER</div>
+                        <div class="button button-sign-in button-mob" data-bs-toggle="modal"
+                            data-bs-target="#signInModal">LOGIN</div>
+                    </div>
+                </div>
+                <a href="#" class="navbar__link">Home</a>
+                <a href="#" class="navbar__link">About</a>
+                <a href="#" class="navbar__link">Games</a>
+                <a href="#" class="navbar__link">News</a>
+                <a href="#" class="navbar__link">Contacts</a>
+                <a href="#" class="navbar__link">Terms and condition of use</a>
+                <a href="#" class="navbar__link">Secure payment</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="main-slider">
+            <div class="main-slider__container swiper-container ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main-slider__slide">
+                        <div class="main-slider__slide-about">
+                            <h2 class="main-slider__slide-title">Horizon</h2>
+                            <h3 class="main-slider__slide-title main-slider__slide-title--h3">Forbidden West</h3>
+                            <p class="main-slider__slide-text">Horizon Forbidden West is an upcoming action role-playing
+                                game developed by Guerrilla Games and published by Sony Interactive Entertainment. </p>
+                            <a href="#">
+                                <div class="button button-sign-up">PLAY NOW</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide main-slider__slide">
+                        <div class="main-slider__slide-about">
+                            <h2 class="main-slider__slide-title">Horizon</h2>
+                            <h3 class="main-slider__slide-title main-slider__slide-title--h3">Forbidden West</h3>
+                            <p class="main-slider__slide-text">Horizon Forbidden West is an upcoming action role-playing
+                                game developed by Guerrilla Games and published by Sony Interactive Entertainment. </p>
+                            <a href="#">
+                                <div class="button button-sign-up">PLAY NOW</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide main-slider__slide">
+                        <div class="main-slider__slide-about">
+                            <h2 class="main-slider__slide-title">Horizon</h2>
+                            <h3 class="main-slider__slide-title main-slider__slide-title--h3">Forbidden West</h3>
+                            <p class="main-slider__slide-text">Horizon Forbidden West is an upcoming action role-playing
+                                game developed by Guerrilla Games and published by Sony Interactive Entertainment. </p>
+                            <a href="#">
+                                <div class="button button-sign-up">PLAY NOW</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-swipper__pagination swiper-pagination "></div>
+            </div>
+
+        </section>
+        <section class="company-condition">
+            <div class="container">
+                <div class="condition-card__wrap">
+                    <div class="condition__card">
+                        <div class="condition__icon">
+                            <img src="../img/icon/fast-delivery.png" alt="">
+                        </div>
+                        <div class="condition-about">
+                            <h3 class="condition__title">Free Delivery</h3>
+                            <p class="condition__text">Free Shipping On All Order lorem ipsum dolor sit amet,
+                                consectetuer
+                                adipiscing elit
+                            </p>
+                        </div>
+                        <div class="condition__border--bot"></div>
+                    </div>
+                    <div class="condition__card">
+                        <div class="condition__icon">
+                            <img src="../img/icon/money.png" alt="">
+                        </div>
+                        <div class="condition-about">
+                            <h3 class="condition__title">Money Return</h3>
+                            <p class="condition__text">Back Guarantee in 7 days dolor sit amet, consectetuer adipiscing
+                                elit
+                            </p>
+                        </div>
+                        <div class="condition__border--bot"></div>
+                    </div>
+                    <div class="condition__card">
+                        <div class="condition__icon">
+                            <img src="../img/icon/price-tag.png" alt="">
+                        </div>
+                        <div class="condition-about">
+                            <h3 class="condition__title">Member Discount</h3>
+                            <p class="condition__text">On every order over $130.00 consectetuer
+                            </p>
+                        </div>
+                        <div class="condition__border--bot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="games-list">
+            <div class="container">
+                <div class="game-list-swiper swiper-container">
+                    <h2 class="game__container-title">TOP GAMES</h2>
+                    <div class="game__tabs">
+                        <p class="game-tab__text game-tab__text--active">All</p>
+                        <p class="game-tab__text">Adventure</p>
+                        <p class="game-tab__text">Racing & Flying</p>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide game__item-slide adventure">
+                            <div class="games__card">
+                                <div class="game-img__container ">
+                                    <div class="game-img__container--focus">
+                                        <div class="focus--btn__container">
+                                            <div class="button button-sign-in">READ MORE</div>
+                                            <div class="button button-sign-up">BUY NOW</div>
+                                        </div>
+                                    </div>
+                                    <div class="sale-ticket">
+                                        <div class="sale-ticket-price">-50%</div>
+                                    </div>
+                                    <img src="./img/gamesimg/Horizon.jpg" alt="game-preview" class="game__img">
+                                </div>
+                                <div class="game__title">Horizon Forbidden West</div>
+                                <div class="game-information__container">
+                                    <div class="game__rate">
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                    </div>
+                                    <div class="game-price__container">
+                                        <p class="game-sale">$282.02</p>
+                                        <p class="game-price">$140.95</p>
+                                    </div>
+                                </div>
+                                <div class="game-about">Horizon Forbidden West is an upcoming action role-playing game
+                                    developed by Guerrilla Games and published by Sony Interactive Entertainment....
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide game__item-slide adventure">
+                            <div class="games__card">
+                                <div class="game-img__container">
+                                    <!-- <div class="sale-ticket">
+                                    <div class="sale-ticket-price"></div>
+                                </div> -->
+                                <div class="game-img__container--focus">
+                                    <div class="focus--btn__container">
+                                        <div class="button button-sign-in">READ MORE</div>
+                                        <div class="button button-sign-up">BUY NOW</div>
+                                    </div>
+                                </div>
+                                    <img src="./img/gamesimg/Sackboy.jpg" alt="game-preview" class="game__img">
+                                </div>
+                                <div class="game__title">Sackboy: A Big Adventure</div>
+                                <div class="game-information__container">
+                                    <div class="game__rate">
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                    </div>
+                                    <div class="game-price__container">
+                                        <!-- <p class="game-sale">$62.02</p> -->
+                                        <p class="game-price">$85.95</p>
+                                    </div>
+                                </div>
+                                <div class="game-about">For norland produce age wishing. To figure on it spring season
+                                    up.
+                                    Her provision acuteness had excellent two why intention...</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide game__item-slide adventure">
+                            <div class="games__card">
+                                <div class="game-img__container">
+                                    <!-- <div class="sale-ticket">
+                                    <div class="sale-ticket-price">-30%</div>
+                                </div> -->
+                                <div class="game-img__container--focus">
+                                    <div class="focus--btn__container">
+                                        <div class="button button-sign-in">READ MORE</div>
+                                        <div class="button button-sign-up">BUY NOW</div>
+                                    </div>
+                                </div>
+                                    <img src="./img/gamesimg/Crash.jpg" alt="game-preview" class="game__img">
+                                </div>
+                                <div class="game__title">Crash Bandicoot 4 - It's About Time</div>
+                                <div class="game-information__container">
+                                    <div class="game__rate">
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                    </div>
+                                    <div class="game-price__container">
+                                        <!-- <p class="game-sale">$62.02</p> -->
+                                        <p class="game-price">$240.95</p>
+                                    </div>
+                                </div>
+                                <div class="game-about">For norland produce age wishing. To figure on it spring season
+                                    up. Her provision acuteness had excellent two why intention.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide game__item-slide racing-flying">
+                            <div class="games__card">
+                                <div class="game-img__container">
+                                    <div class="sale-ticket">
+                                        <div class="sale-ticket-price">-30%</div>
+                                    </div>
+                                    <div class="game-img__container--focus">
+                                        <div class="focus--btn__container">
+                                            <div class="button button-sign-in">READ MORE</div>
+                                            <div class="button button-sign-up">BUY NOW</div>
+                                        </div>
+                                    </div>
+                                    <img src="./img/gamesimg/RactchedClank.jpg" alt="game-preview" class="game__img">
+                                </div>
+                                <div class="game__title">Ratchet & Clank: Rift Apart</div>
+                                <div class="game-information__container">
+                                    <div class="game__rate">
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                        <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                            viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                                stroke="gold" /></svg>
+                                    </div>
+                                    <div class="game-price__container">
+                                        <p class="game-sale">$62.02</p>
+                                        <p class="game-price">$40.95</p>
+                                    </div>
+                                </div>
+                                <div class="game-about">For norland produce age wishing. To figure on it spring
+                                    season up. Her provision acuteness had excellent two why intention.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-pagination swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="clients-feedback">
+            <div class="container">
+                <div class="clients-feedback-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="client-feedback__container">
+                                <img class="client-feedback__icon" src="img/clientIcon.png" alt="Client-photo">
+                                <h3 class="client-feedback__name">VALERIE RISH</h3>
+                                <p class="client-feedback__text">The final scene of Horizon Zero Dawn reveals HADES has
+                                    not been completely defeated.<br> <br> A dark entity - thought to be HADES -
+                                    shootsmout of a
+                                    pile of rubble and is captured by Sylens, a secondary character thought to be Aloy's
+                                    ally.
+                                    <p class="client-feedback__text--bottom"> He seems hungry for knowledge about the
+                                        evil system's "masters" and seems
+                                        ready to stop at nothing to acquire it. He could be the main villain of Horizon
+                                        Forbidden West or the catalyst for its events at the very least.</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-feedback__container">
+                                <img class="client-feedback__icon" src="img/clientIcon.png" alt="Client-photo">
+                                <h3 class="client-feedback__name">VALERIE RISH</h3>
+                                <p class="client-feedback__text">The final scene of Horizon Zero Dawn reveals HADES has
+                                    not been completely defeated.<br> <br> A dark entity - thought to be HADES -
+                                    shootsmout of a
+                                    pile of rubble and is captured by Sylens, a secondary character thought to be Aloy's
+                                    ally.
+                                    <p class="client-feedback__text--bottom"> He seems hungry for knowledge about the
+                                        evil system's "masters" and seems
+                                        ready to stop at nothing to acquire it. He could be the main villain of Horizon
+                                        Forbidden West or the catalyst for its events at the very least.</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client-feedback__container">
+                                <img class="client-feedback__icon" src="img/clientIcon.png" alt="Client-photo">
+                                <h3 class="client-feedback__name">VALERIE RISH</h3>
+                                <p class="client-feedback__text">The final scene of Horizon Zero Dawn reveals HADES has
+                                    not been completely defeated.<br> <br> A dark entity - thought to be HADES -
+                                    shootsmout of a
+                                    pile of rubble and is captured by Sylens, a secondary character thought to be Aloy's
+                                    ally.
+                                    <p class="client-feedback__text--bottom"> He seems hungry for knowledge about the
+                                        evil system's "masters" and seems
+                                        ready to stop at nothing to acquire it. He could be the main villain of Horizon
+                                        Forbidden West or the catalyst for its events at the very least.</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients-feedback-paggination swiper-pagination"></div>
+                </div>
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <div class="about-us__container">
+                    <article class="about-us__container--article">
+                        <div class="about-us__describe about-us__describe--part-1">
+                            <img src="./img/ClipHorizon.jpg" alt="img" class="about-us__img about-us__img--horizon">
+                            <div class="about-us__text-wrap">
+                                <h3 class="about-us__title">A FEW WORDS ABOUT US</h3>
+                                <p class="about-us__text">One of the Playstation’s biggest game expected to be released
+                                    on the PlayStation 5 in 2021 is <a href="#"> Horizon Forbidden West</a>, a sequel to
+                                    Guerilla Games'
+                                    open-world sci-fi game from 2017. Sony Interactive Entertainment has continued to
+                                    pull
+                                    back
+                                    the curtain on the long-awaited sequel where Aloy's adventure continues. <br>This is
+                                    everything
+                                    that you'd want to know about the game, including its release window, platforms, and
+                                    story
+                                    details.
+                                </p>
+                                <div class="button button-sign-in">LEARN MORE</div>
+                            </div>
+                        </div>
+                        <div class="about-us__describe about-us__describe--part-2">
+                            <p class="about-us__text">
+                                Leading up to those colossal announcements, Guerrilla had teased the sequel's existence
+                                with
+                                a handful of mysterious job openings and even a few accidental social media posts. But
+                                now
+                                the title has been confirmed as an early release to show off the technical capabilities
+                                of
+                                the PS5 by continuing Aloy's critically acclaimed storyline.</p>
+                            <h3 class="about-us__title">What could the Horizon Forbidden West story be about?</h3>
+                            <p class="about-us__text">
+                                Gamers play as Aloy, a member of one of many warring tribes that stumbles upon the
+                                origins
+                                of the mechanical beasts the rule the world. They were created by a company named Faro
+                                Automated Solutions, nearly 1,000 ago as “peacemakers,” but need biomass for fuel.
+                                Eventually, they consumed so much of the Earth’s biosphere that it eradicated most
+                                humans.
+                                But there was a Plan B.
+                            </p>
+                        </div>
+                        <div class="about-us__describe--part-3">
+                            <div class="about-us__text-wrap">
+                                <h3 class="about-us__title">GAME FEATURES</h3>
+                                <div class="about-us__text-container">
+                                    <p class="about-us__text-point">
+                                        Faro also created an artificial intelligence named GAIA, that could shut down
+                                    </p>
+                                    <p class="about-us__text-point">
+                                        Make the Earth livable for humans again
+                                    </p>
+                                    <p class="about-us__text-point">
+                                        System designed to teach humans to not repeat the mistakes of the last
+                                        generation,
+                                        was
+                                        sabotaged by Faro and led to the rise of Aloy’s tribal society.
+                                    </p>
+                                    <p class="about-us__text-point">
+                                        Faro also created an artificial intelligence named GAIA, that could shut down
+                                        Make the Earth livable for humans again.
+                                    </p>
+                                    <p class="about-us__text-point">
+                                        System designed to teach humans to not repeat the mistakes of the last
+                                        generation,
+                                        was
+                                        sabotaged by Faro and led to the rise of Aloy’s tribal society. He seems hungry
+                                        for
+                                        knowledge about the evil system’s “masters” and seems ready to stop
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="./img/ClipClank.jpg" alt="img" class="about-us__img about-us__img--ratched-clank">
+                        </div>
+                        <div class="about-us__describe about-us__describe--part-4">
+                            <p class="about-us__text">Leading up to those colossal announcements, Guerrilla had
+                                teased the sequel's existence with a handful of mysterious job openings and even a few
+                                accidental social media posts. But now the title has been confirmed as an early release
+                                to
+                                show off the technical capabilities of the PS5 by continuing Aloy's critically acclaimed
+                                storyline.</p>
+                        </div>
+                    </article>
+                    <aside class="about-us__container--aside">
+                        <div class="games__card games__card--aside">
+                            <div class="main__title--aside">Deal of the Day</div>
+                            <div class="sale-ticket">
+                                <div class="sale-ticket-price">-70%</div>
+                            </div>
+                            <div class="aside__img-container">
+
+                                <img src="./img/ClipWatchDogs.jpg" alt="game-preview" class="aside__img">
+                            </div>
+                            <div class="game__title">Watch Dogs: Legion</div>
+                            <div class="game-information__container">
+                                <div class="game__rate">
+                                    <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                        viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                            stroke="gold" /></svg>
+                                    <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                        viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                            stroke="gold" /></svg>
+                                    <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                        viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                            stroke="gold" /></svg>
+                                    <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                        viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                            stroke="gold" /></svg>
+                                    <svg class="rate-star" enable-background="new 0 0 24 24" height="18"
+                                        viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+                                            stroke="gold" /></svg>
+                                </div>
+                                <div class="game-price__container">
+                                    <p class="game-sale">$100.02</p>
+                                    <p class="game-price">$30.92</p>
+                                </div>
+                            </div>
+                            <div class="game-about">For norland produce age wishing. To figure on it spring season up.
+                                Her
+                                provision acuteness had excellent two why intention.</div>
+                            <div class="game-counter">
+                                <div class="game-counter__item game-counter__item--days">
+                                    <div class="game-counter__item-title">15</div>
+                                    <div class="game-counter__item-about">DAYS</div>
+                                </div>
+                                <div class="game-counter__item game-counter__item--hours">
+                                    <div class="game-counter__item-title">23</div>
+                                    <div class="game-counter__item-about">HOURS</div>
+                                </div>
+                                <div class="game-counter__item game-counter__item--mins">
+                                    <div class="game-counter__item-title">48</div>
+                                    <div class="game-counter__item-about">MINS</div>
+                                </div>
+                                <div class="game-counter__item game-counter__item--secs">
+                                    <div class="game-counter__item-title">30</div>
+                                    <div class="game-counter__item-about">SECS</div>
+                                </div>
+                            </div>
+                            <div class="button button-sign-up">BUY NOW</div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__colum">
+                    <h3 class="footer__title">CONTACT INFO & PAYMENT <img class="footer-arrow"
+                        src="./img/icon/up-arrow-angle.png" alt="arrow"></h3>
+                    <div class="footer__text">
+                        <p class="footer__p"> <span class="footer-position">Game Store</span> <br>
+                            507-Union Trade ipsum Doler Centre<br>
+                            UK<br>
+                            <span class="footer-tel"> +38 789-789-7897 </span><br>
+                            <span class="footer-email">sales@yourcompany.com</span></p>
+                    </div>
+                </div>
+                <div class="footer__colum">
+                    <h3 class="footer__title">MENU <img class="footer-arrow" src="./img/icon/up-arrow-angle.png"
+                            alt="arrow"></h3>
+                    <div class="footer__text">
+                        <a href="" class="footer__link">Delivery</a>
+                        <a href="" class="footer__link">Legal Notice</a>
+                        <a href="" class="footer__link">Terms and conditions of use</a>
+                        <a href="" class="footer__link">About us</a>
+                        <a href="" class="footer__link">Secure payment</a>
+                    </div>
+                </div>
+                <div class="footer__colum">
+                    <h3 class="footer__title">USEFUL LINKS <img class="footer-arrow" src="./img/icon/up-arrow-angle.png"
+                            alt="arrow"></h3>
+                    <div class="footer__text">
+                        <a href="" class="footer__link">Hot Trending</a>
+                        <a href="" class="footer__link">Our Store</a>
+                        <a href="" class="footer__link">New Arrival</a>
+                        <a href="" class="footer__link">Best Seller</a>
+                        <a href="" class="footer__link">Order Tracking</a>
+                        <a href="" class="footer__link">Warranty and Services</a>
+                    </div>
+                </div>
+                <div class="footer__colum">
+                    <h3 class="footer__title">OUR NEWSLETTER </h3>
+                    <div class="footer__text footer__text--news">
+                        <p class="footer__p">But now the title has been confirmed as an early release to show off the
+                        </p>
+                    </div>
+                    <div class="footer__input-container">
+                        <input type="text" class="footer__input" placeholder="Your email...">
+                        <div class="button button-sign-up footer__btn--subscribe">SUBSCRIBE</div>
+                    </div>
+                    <div class="footer-social__icons">
+                        <a href="#"> <svg version="1.1" class="footer-social__icon" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 155.139 155.139"
+                                style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
+                                <g>
+                                    <path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+		c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
+		v20.341H37.29v27.585h23.814v70.761H89.584z" />
+                            </svg></a>
+                        <a href="#"><svg version="1.1" class="footer-social__icon" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+			C480.224,136.96,497.728,118.496,512,97.248z" />
+                            </svg></a>
+                        <a href="#"><svg version="1.1" class="footer-social__icon" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 260.366 260.366"
+                                style="enable-background:new 0 0 260.366 260.366;" xml:space="preserve">
+                                <g>
+                                    <path d="M34.703,0.183C15.582,0.183,0.014,15.748,0,34.884C0,54.02,15.568,69.588,34.703,69.588
+		c19.128,0,34.688-15.568,34.688-34.704C69.391,15.75,53.83,0.183,34.703,0.183z" />
+                                    <path d="M60.748,83.531H8.654c-2.478,0-4.488,2.009-4.488,4.489v167.675c0,2.479,2.01,4.488,4.488,4.488h52.093
+		c2.479,0,4.489-2.01,4.489-4.488V88.02C65.237,85.539,63.227,83.531,60.748,83.531z" />
+                                    <path d="M193.924,81.557c-19.064,0-35.817,5.805-46.04,15.271V88.02c0-2.48-2.01-4.489-4.489-4.489H93.424
+		c-2.479,0-4.489,2.009-4.489,4.489v167.675c0,2.479,2.01,4.488,4.489,4.488h52.044c2.479,0,4.489-2.01,4.489-4.488v-82.957
+		c0-23.802,4.378-38.555,26.227-38.555c21.526,0.026,23.137,15.846,23.137,39.977v81.535c0,2.479,2.01,4.488,4.49,4.488h52.068
+		c2.478,0,4.488-2.01,4.488-4.488v-91.977C260.366,125.465,252.814,81.557,193.924,81.557z" />
+                            </svg></a>
+                    </div>
+                    Copyright © 2021 . All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+
+    &-active {
+        background: #FFB400;
+    }
+}
+
+.main-slider__container {
+    height: 65vh;
+    min-width: 0;
+}
+
+.main-slider__slide {
+    background: url(../img/banner.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    &-about {
+        display: flex;
+        flex-flow: column;
+        width: 70%;
+        height: 70%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20%;
+
+        & a {
+            text-decoration: none;
+        }
+    }
+
+    &-title {
+        color: white;
+        font-family: JosefinSans-Bold;
+        text-transform: uppercase;
+        margin: 2px 0;
+        font-size: 36px;
+        &--h3 {
+            font-size: 20px;
+            font-family: JosefinSans-Regular;
+        }
+    
+    }
+
+    &-text {
+        color: white;
+        font-family: Lato-Regular;
+        font-size: 14px;
+        text-align: center;
+
+    }
+}
+
+@media (min-width: 620px) {
+    .main-swipper__pagination {
+        text-align: left;
+        padding: 20px 0 50px 10%;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+
+    }
+    .main-slider__slide {
+        justify-content: flex-start;
+        padding: 5% 0 0 10%;
+        &-about {
+            width: 40%;
+            padding-top: 0px;
+            & .button {
+                align-self: flex-start;
+            }
+        }
+        &-title {
+            font-size: 42px;
+            &--h3 {
+                font-size: 18px;
+            }
+        }
+       
+    }
+
+    
+
+}
+@media (min-width: 1100px) {
+    .main-swipper__pagination {
+        text-align: left;
+        bottom: 20px;
+        padding: 20px 0 30px 10%;
+    }
+    .main-slider__slide {
+        justify-content: flex-start;
+        padding: 5% 0 0 10%;
+        &-about {
+            width: 40%;
+            align-items: start;
+            padding-top: 0px;
+            & .button {
+                align-self: flex-start;
+            }
+        }
+        &-title {
+            font-size: 60px;
+            &--h3 {
+                font-size: 32px;
+            }
+        }
+        &-text {
+            text-align: start;
+            font-size: 16px;
+            font-family: Lato-Light;
+        }
+    }
+    
+}
