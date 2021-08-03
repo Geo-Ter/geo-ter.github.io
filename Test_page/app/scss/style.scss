@@ -1,0 +1,34 @@
+@font-face {
+    font-family: myriadpro-regular;
+    src: url(../fonts/myriadpro-regular.ttf);
+}
+@font-face {
+    font-family: myriadpro-light;
+    src: url(../fonts/myriadpro-regular.ttf);
+}
+
+@import url(./normalize.css);
+
+
+@import 'parts/navbar';
+@import 'parts/breadcrumbs';
+@import 'parts/aside';
+@import 'parts/main';
+@import 'parts/header';
+
+body {
+    font-family: myriadpro-regular, sans-serif;
+}
+.page__container {
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin-top: initial;
+}
+
+
+//! all
+a:hover {
+    color: inherit;
+}

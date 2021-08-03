@@ -1,0 +1,186 @@
+.navbar__bg {
+    background-color: #f9fafc;
+}
+
+.navbar__ {
+
+    &link {
+        text-decoration: none;
+        color: #454647;
+        font-size: 15px;
+    }
+
+    &container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    &block {
+        display: flex;
+        height: 111px;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 18px;
+        width: 113px;
+        transition: all 0.5s ease-in-out;
+        border-top: 0px;
+
+        &:hover {
+            border-top: 3px solid #ee3346;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &icon-title {
+        font-size: 15px;
+    }
+}
+
+.navbar__icon {
+    width: 46px;
+    height: 44px;
+
+    &--armchair {
+        background: url(../img/navbar/armchair.png)no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/armchair.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+
+    &--tools {
+        position: relative;
+        left: 10px;
+        background: url(../img/navbar/tools.png)no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/tools.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+
+    &--home {
+
+        background: url(../img/navbar/home.png)no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/home.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+
+    &--clock {
+        background: url(../img/navbar/clock.png)no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/clock.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+
+    &--bike {
+        background: url(../img/navbar/bike.png) no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/bike.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+
+    &--led {
+        background: url(../img/navbar/lamp.png) no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/led.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+
+        width: 25px;
+    }
+
+    &--pen {
+        background: url(../img/navbar/pen.png) no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/pen.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+
+    &--winder {
+        background: url(../img/navbar/winder.png) no-repeat;
+        transition: all 0.5s easy-in-out;
+
+        &:hover {
+            background: url(../img/navbar/active/withdraw.png) no-repeat;
+            transition: all 0.5s easy-in-out;
+        }
+    }
+}
+
+.accordeon__navbar {
+    display: none;
+}
+
+.accordion-item {
+    background-color: inherit;
+}
+
+nav .container-fluid .accordeon__navbar #accordion-mob__navbar {
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    width: 100%;
+    padding-bottom: 12px;
+
+}
+
+nav .container-fluid .accordeon__navbar #accordion-mob__navbar .accordion-header {
+    display: flex;
+    justify-content: center;
+
+    &::after {
+        content: url(../img/main/arrow-up.png);
+        position: relative;
+        left: -31px;
+        top: 15px;
+        transform: rotate(0deg);
+        transition: all 0.2s ease-in-out;
+    }
+    &:not(.collapsed)::after {
+            transform: rotate(-180deg);
+            transition: all 0.2s ease-in-out;
+    }
+}
+
+
+
+
+//!media 
+@media (max-width: 576px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 992px) {
+    .accordeon__navbar {
+        display: flex;
+    }
+    .navbar__container {
+        margin-top: 20px;
+    }
+    .navbar-desktop {
+        display: none;
+    }
+
+}

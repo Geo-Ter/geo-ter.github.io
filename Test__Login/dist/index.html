@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-window__container">
+            <div class="login-window__title-container">
+                <div class="login-window__icon-container">
+                    <img class="login-window__icon" src="./img/login-icon.svg" alt="login-icon">
+                </div>
+                <h3 class="login-window__title--text">Login To Your Account / Register New</h3>
+            </div>
+            <div class="login-window__input-container">
+                <div class="sign-in__container">
+                    <div class="btop-gradient"></div>
+                    <form class="sign-in__form" action="#">
+                        <label class="sign-in__label" for="sign-in_UserName">
+                            <input id="sign-in_UserName" class="sign-in__input _req" placeholder="" type="text">
+                        </label>
+                        <label class="sign-in__label" for="sign-in_Password">
+                            <input id="sign-in_Password" class="sign-in__input _req" type="password">
+                        </label>
+                        <div class="sign-in__footer">
+                            <input class="sign-in__checkbox" type="checkbox" id="ch_password">
+                            <label class="sign-in__checkbox--customize" for="ch_password"></label>
+                            <div class="sign-in__tooltips">
+                                You no longer need to enter a password every time you use the site
+                            </div>
+                            <span class="sign-in__checkbox--text">Remember My password</span>
+                            <button class="sign-in__button">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up__container">
+                    <p class="sign-up__title">Register</p>
+                    <form class="sign-up__form" action="#">
+                        <label class="sign-up__input--label" for="sign-up_Email">Email
+                            <input type="email" id="sign-up_Email" class="sign-up__input _req">
+                        </label>
+                        <label class="sign-up__input--label" for="sign-up_UserName">User Name
+                            <input type="text" id="sign-up_UserName" class="sign-up__input _req">
+                        </label>
+                        <label class="sign-up__input--label" for="sign-up_Password">Password
+                            <input type="password" id="sign-up_Password" class="sign-up__input _req">
+                        </label>
+                        <button class="sign-up__btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>

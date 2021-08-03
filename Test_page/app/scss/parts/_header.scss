@@ -1,0 +1,156 @@
+//! Header-up
+.header-up {
+    &__bg {
+        background-color: rgb(240, 243, 248);
+    }
+
+    &__container {
+        padding: 10px 0px;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+
+
+        &--profile {
+            justify-content: end !important;
+
+            &::after {
+                content: url(../img/header/down-arrow.png);
+                position: relative;
+                left: -15px;
+                z-index: 1;
+            }
+        }
+
+        &--shop {
+            position: relative;
+            left: -20px;
+
+            &:after {
+                content: '0';
+                position: relative;
+                left: 6px;
+            }
+        }
+    }
+}
+
+.cleint-profile__link {
+    display: flex;
+    width: 50px;
+    z-index: 2;
+    border-radius: 30px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        transition: all 0.5s ease-in-out;
+        background-color: #d2d4d691;
+    }
+}
+
+//! dropdown 
+.dropdown-toggle::after {
+    content: none;
+}
+
+
+
+//! header-logo container
+.header__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo__container {
+    margin-top: 17px;
+    margin-bottom: 19px;
+}
+.logo__link {
+    padding-left: 10%
+
+}
+
+.callback__ {
+    &container {
+        display: flex;
+        flex-flow: column;
+        margin-top: 40px;
+        margin-bottom: 28px;
+    }
+
+    &request {
+        font-size: 15px;
+        font-family: myriadpro-light;
+        color: #454647;
+    }
+
+    &tel {
+        text-decoration: none;
+        font-size: 15px;
+        color: #454647;
+    }
+}
+.our-tel__modal--mobile {
+    display: none;
+}
+.mobile__icon {
+    display: none;
+}
+
+//!media
+
+
+@media (max-width: 992px) {
+    .logo__link {
+        padding-left: 0%
+    
+    }
+}
+@media (max-width:768px) {
+    
+.header-up__item--shop::after {
+
+    content: '0';
+    position: relative;
+    left: 3px;
+}
+    .callback__tel, .callback__request {
+        display: none;
+    }
+    .callback__container {
+        justify-content: end;
+    }
+    .mobile__icon {
+        display: flex;
+        width: 70px;
+        align-self: end;
+        transform: rotate(0deg);
+        animation: move 5s infinite linear;
+        &:hover {
+            opacity: 0.6;
+            
+        }
+    }
+    @keyframes move {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(30deg);
+        }
+        75% {
+          transform: rotate(15deg);
+        }
+        100% {
+            transform: rotate(0deg);
+
+        }
+    }
+    
+    .our-tel__modal--mobile {
+        display: flex;
+    }
+}

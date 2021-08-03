@@ -1,0 +1,107 @@
+.breadcrumbs__ {
+
+    &container {
+        padding: 10px 0px;
+    }
+
+    &wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 585px;
+    }
+
+    &text {
+        margin-right: 17px;
+        color: #999999;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:not(.breadcrumbs__text--active)::after {
+            content: url(../img/breadcrumbs/right-arrow.png);
+            position: relative;
+            top: -2px;
+            left: 5px;
+        }
+
+        &--active {
+            color: #454647;
+        }
+
+        &--mobile {
+            display: none;
+
+            &-active {
+                display: none;
+            }
+        }
+    }
+}
+
+
+//!media 
+@media (max-width: 700px) {
+    .breadcrumbs__ {
+        &text {
+            margin: 0px 3px;
+
+            &:not(.breadcrumbs__text--active)::after {
+                left: 3px;
+            }
+        }
+
+        &wrap {
+            justify-content: start;
+        }
+    }
+}
+
+@media screen and (max-width:630px) {
+    .breadcrumbs__wrap {
+        width: 90%;
+        }
+    .breadcrumbs__text {
+        display: none;
+
+
+        &--mobile {
+            display: flex;
+
+            &-previous {
+                left: 6px;
+position: relative;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            &:after {
+                content: url(../img/breadcrumbs/right-arrow.png);
+                position: relative;
+                top: -2px;
+                left: 5px;
+            }
+
+            &-active {
+                display: flex;
+                position: relative;
+                left: 13px;
+            }
+
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .breadcrumbs__text--mobile {
+        &-active {
+            left: 8px;
+        }
+
+        &-previous {
+            display: none;
+        }
+    }
+}

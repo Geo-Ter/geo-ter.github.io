@@ -1,0 +1,98 @@
+.aside-menu__btn {
+    width: 210px;
+    height: 50px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        background-color: #d8dade;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.aside-menu__links {
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #212529;
+    margin: 5px 0px;
+
+    &--active {
+        font-size: 16px !important;
+    }
+}
+
+//! accordeon 
+.accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    background-color: transparent;
+
+    &::after {
+        position: relative;
+        left: -113px;
+        top: 3px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    &:not(.collapsed) {
+        color: inherit;
+        background-color: transparent;
+        box-shadow: none;
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: rotate(-180deg);
+            position: relative;
+            left: -113px;
+            top: -2px;
+        }
+    }
+}
+
+.accordion-body__container {
+    display: flex;
+    flex-flow: column;
+    padding-top: 0px;
+    margin-top: -10px;
+}
+@media (max-width:1100px) {
+    aside {
+        display: none;
+    }
+}
+// @media (max-width: 992px) {
+//     .accordion-button {
+
+//         &::after {
+//             left: -50px;
+//         }
+
+//         &:not(.collapsed)::after {
+//             left: -50px;
+//         }
+
+//     }
+// }
+
+// @media screen and (max-width:768px) {
+//     .aside-menu__btn {
+//         width: 100%;
+//     }
+//     .accordion-button {
+
+//         &::after {
+//             left: 0px;
+//         }
+
+//         &:not(.collapsed)::after {
+//             left: 0px;
+//         }
+
+//     }
+// }

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./library/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid header-up__bg">
+            <div class="container">
+                <div class="row header-up__container">
+                    <div class="col-11 header-up__item header-up__item--profile dropdown">
+                        <a href="#" class="cleint-profile__link dropdown-toggle " role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/header/profile icon.png" alt="client-profile" class="client-profile__img"></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Действие 1</a></li>
+                            <li><a class="dropdown-item" href="#">Действие 2</a></li>
+                            <li><a class="dropdown-item" href="#">Действие 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-1  header-up__item header-up__item--shop">
+                        <a href="#" class="shop__link">
+                            <img src="img/header/shop.png" alt="shop-icon" class="shop__img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row header__container">
+                <div class="col-lg-9 col-8  logo__container">
+                    <a href="#" class="logo__link"><img src="img/header/Logo.png" alt="Logo-pic" class="logo__img">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-4 callback__container">
+                    <img src="img/header/phone-call.png" alt="phone" class="mobile__icon" href="#" type="button"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        class="callback__request">Заказать обратный звонок</a>
+                    <a href="tel:+38 (044) 501 14 41" class="callback__tel">+38 (044) 501 14 41</a>
+                    <a href="tel: +38 (057) 784 07 00" class="callback__tel"> +38 (057) 784 07 00</a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Мы вам перезвоним!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Мы свяжемся с вами в течении 15 минут!</p>
+                        <form id="modal-feedback" action="" method="">
+                            <input type="tel" name="customer-phone" id="feedback-number" placeholder="Введите ваш номер" >
+                            <p class="our-tel__modal--mobile">Наши номера:</br>+38 (044) 501 14 41<br>+38 (057) 784 07 00</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="feedback-number-button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <nav>
+        <div class="container-fluid navbar__bg">
+            <div class="accordion accordeon__navbar" id="accordionPanelsStayOpenExample">
+                <div id="accordion-mob__navbar" class="accordion-item accordion-navbar">
+                    <p class="accordion-header collapsed aside-menu__links" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOneNav" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">Каталог</p>
+                    <div id="panelsStayOpen-collapseOneNav" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body accordion-body__container">
+                            <div class="navbar__container">
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/armchair.png" alt
+                                            class="navbar__icon navbar__icon--armchair"></div>
+                                        <p class="navbar__icon-title">Мебель</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/tools.png" alt="icon"
+                                            class="navbar__icon navbar__icon--tools"></div>
+                                        <p class="navbar__icon-title">Кухня</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/home.png" alt="icon"
+                                            class="navbar__icon navbar__icon--home"></div>
+                                        <p class="navbar__icon-title">Все для дома</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/lamp.png" alt="icon"
+                                            class="navbar__icon navbar__icon--led"></div>
+                                        <p class="navbar__icon-title">Освещение</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/clock.png" alt="icon"
+                                            class="navbar__icon navbar__icon--clock"></div>
+                                        <p class="navbar__icon-title">Часы и декор</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/pen.png" alt="icon" class="navbar__icon navbar__icon--pen">
+                                        </div>
+                                        <p class="navbar__icon-title">Деловой стиль</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/bike.png" alt="icon"
+                                            class="navbar__icon navbar__icon--bike"></div>
+                                        <p class="navbar__icon-title">Активный отдых</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="navbar__link">
+                                    <div class="navbar__block">
+                                        <div src="img/navbar/winder.png" alt="icon"
+                                            class="navbar__icon navbar__icon--winder"></div>
+                                        <p class="navbar__icon-title"> Детский мир</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container navbar-desktop">
+                <div class="navbar__container">
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/armchair.png" alt class="navbar__icon navbar__icon--armchair"></div>
+                            <p class="navbar__icon-title">Мебель</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/tools.png" alt="icon" class="navbar__icon navbar__icon--tools"></div>
+                            <p class="navbar__icon-title">Кухня</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/home.png" alt="icon" class="navbar__icon navbar__icon--home"></div>
+                            <p class="navbar__icon-title">Все для дома</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/lamp.png" alt="icon" class="navbar__icon navbar__icon--led"></div>
+                            <p class="navbar__icon-title">Освещение</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/clock.png" alt="icon" class="navbar__icon navbar__icon--clock"></div>
+                            <p class="navbar__icon-title">Часы и декор</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/pen.png" alt="icon" class="navbar__icon navbar__icon--pen"></div>
+                            <p class="navbar__icon-title">Деловой стиль</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/bike.png" alt="icon" class="navbar__icon navbar__icon--bike"></div>
+                            <p class="navbar__icon-title">Активный отдых</p>
+                        </div>
+                    </a>
+                    <a href="#" class="navbar__link">
+                        <div class="navbar__block">
+                            <div src="img/navbar/winder.png" alt="icon" class="navbar__icon navbar__icon--winder"></div>
+                            <p class="navbar__icon-title"> Детский мир</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="breadcrumbs__container">
+            <div class="breadcrumbs__wrap">
+                <p class="breadcrumbs__text">Главная</p>
+                <p class="breadcrumbs__text">Каталог</p>
+                <p class="breadcrumbs__text">Кухня</p>
+                <p class="breadcrumbs__text">Кухонные аксуссуары</p>
+                <p class="breadcrumbs__text--mobile"><a href="#">...</a></p>
+                <p class="breadcrumbs__text--mobile breadcrumbs__text--mobile-previous"><a href="#">Кухонные
+                        аксуссуары</a></p>
+                <p class="breadcrumbs__text--mobile-active">Термокружки, термосы</p>
+                <p class="breadcrumbs__text breadcrumbs__text--active">Термокружки, термосы</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row page__container">
+            <main class="col-12 col-md-7 col-lg-7">
+                <section class="about-product">
+                    <div class="product__container">
+                        <p class="product__title">Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy
+                            white and Glass smoked grey</p>
+                        <p class="product__code">PN: AE113AWBPJG1C7BK3D01</p>
+                        <div class="product__card">
+                            <div class="product-sell__container">
+                                <p class="product-sell__price">946 470,</p>
+                                <div class="btn-group product-sell-btn__container" role="group"
+                                    aria-label="Basic example">
+                                    <button type="button"
+                                        class="btn product-sell__btn-wrap product-sell__btn-wrap-buy">Купить</button>
+                                    <button type="button" class="btn product-sell__btn-wrap">
+                                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 490.688 490.688" style="fill: white;" xml:space="preserve">
+                                            <path style="fill:#FFC107;"
+                                                d="M472.328,120.529L245.213,347.665L18.098,120.529c-4.237-4.093-10.99-3.975-15.083,0.262 c-3.992,4.134-3.992,10.687,0,14.82l234.667,234.667c4.165,4.164,10.917,4.164,15.083,0l234.667-234.667 c4.237-4.093,4.354-10.845,0.262-15.083c-4.093-4.237-10.845-4.354-15.083-0.262c-0.089,0.086-0.176,0.173-0.262,0.262 L472.328,120.529z" />
+                                            <path
+                                                d="M245.213,373.415c-2.831,0.005-5.548-1.115-7.552-3.115L2.994,135.633c-4.093-4.237-3.975-10.99,0.262-15.083 c4.134-3.992,10.687-3.992,14.82,0l227.136,227.115l227.115-227.136c4.093-4.237,10.845-4.354,15.083-0.262 c4.237,4.093,4.354,10.845,0.262,15.083c-0.086,0.089-0.173,0.176-0.262,0.262L252.744,370.279 C250.748,372.281,248.039,373.408,245.213,373.415z" />
+                                        </svg>
+
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-img__container">
+                                <img src="img/main/main-ph.png" alt="product photo" class="product-main__img">
+
+                                <div class="product__gallery">
+                                    <img src="img/main/left-arrow.png" alt="arrow"class="product__gallery-btn product__gallery-btn--small product__gallery-btn--small-previous">
+                                        <div class="product__gallery-container--previous">
+                                    <img src="img/main/arrow-down.png" alt="photo" class="product__gallery-btn product__gallery-btn--previous">
+                                </div>
+                                    <div class="product__gallery--min-photo">
+                                        <img src="img/main/small-ph-1.png" alt="photo" class="product__gallery-img product__gallery-img--1 active-img">
+                                        <img src="img/main/small-ph-2.png" alt="photo" class="product__gallery-img product__gallery-img--2">
+                                        <img src="img/main/small-ph-3.png" alt="photo" class="product__gallery-img product__gallery-img--3">
+                                        <img src="img/main/small-ph-4.png" alt="photo" class="product__gallery-img product__gallery-img--4">
+                                        <img src="img/main/small-ph-1.png" alt="photo" class="product__gallery-img product__gallery-img--6">
+                                        <img src="img/main/small-ph-2.png" alt="photo" class="product__gallery-img product__gallery-img--7">
+                                    </div>
+                                    <div class="product__gallery-container--next">
+                                    <img src="img/main/arrow-up.png" alt="arrow" class="product__gallery-btn product__gallery-btn--next">
+                                    </div>
+                                    <img src="img/main/right-arrow.png" alt="arrow" class="product__gallery-btn  product__gallery-btn--small product__gallery-btn--small-next">
+                                </div>
+                            </div>
+                            <div class="product-information">
+                                <div class="product-information__navbar">
+                                        <p class="product-information__navbar--text product-information__navbar--text-about">Описание</p>
+                                        <p class="product-information__navbar--text product-information__navbar--text-guarantee">Гарантия</p>
+                                        <p class="product-information__navbar--text product-information__navbar--text-design">Дизайнер</p>
+                                        <p class="product-information__navbar--text product-information__navbar--text-brend">Бренд</p>
+                                </div>
+                                <div class="product-text__container">
+                                    <p class="product-information__text product-information__text--about">Одна
+                                        линия, много возможностей. Cерия Lirio
+                                        Nick-Knack от Philips, новый торшер, который вдохновляет, идея светильника
+                                        начинается с прямой линии, Lirio Nick-Knack могут быть скручены в 16
+                                        различных
+                                        положениях. Доступные напольные светильники Lirio Nick-Knack выполнены в 5
+                                        ярких
+                                        цветах (красный, жёлтый, синий, белый, чёрный), это игривые торшеры приносят
+                                        эффект
+                                        прямого и отраженного освещения, с дизайнерскими светильниками Lirio
+                                        Nick-Knack вы
+                                        можете читать книгу или просто создать приятную атмосферу в вашем доме.
+                                        Сочетая
+                                        элегантный дизайн с LED лампой, Lirio Nick-Knack является одной из первых
+                                        линий
+                                        большой истории вашего дома.</p>
+                                    <p class="product-information__text product-information__text--guarantee">
+                                        (Информация про гарантию)
+                                    </p>
+                                    <p class="product-information__text product-information__text--design">
+                                        (Информация про дизайн)
+                                    </p>
+                                    <p class="product-information__text product-information__text--brend">
+                                        (Информация про бренд)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            <aside class="col-12 col-md-3 col-lg-3">
+                <div class="aside-menu__container">
+                    <button class="aside-menu__btn">Перейти в каталог</button>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <p class="accordion-header accordion-button collapsed aside-menu__links aside-menu__links--active"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Кухня</p>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body accordion-body__container">
+                                    <a href="#" class="aside-menu__links">Техника для кухни</a>
+                                    <a href="#" class="aside-menu__links">Кухонные аксуссуары</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="./library/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>
